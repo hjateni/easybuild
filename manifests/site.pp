@@ -44,6 +44,7 @@ node default {
    # include '::role::hpcclient' 
    # include '::role::account'
  }
+     include '::role::account'
 }
 
 node 'mserver' {
