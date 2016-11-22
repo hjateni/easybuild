@@ -7,6 +7,7 @@ moduledir = 'modules'
 mod "puppetlabs/inifile", "1.4.1"
 mod 'puppetlabs-mysql', '3.10.0'
 mod 'example42-php', '2.0.27'
+mod 'derdanne/nfs',  '1.0.1'
 # get a specific version
 mod "puppetlabs/stdlib"
 # get latest, don't update thereafter
