@@ -33,6 +33,7 @@ node default {
 
  node 'mclient','mclient2' {
 
+ class account {
    user {'jato':
    ensure => 'present',
    uid    => '5005',
@@ -42,9 +43,9 @@ node default {
    # include java
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
-   # include '::role::account'
+    include '::role::account'
  }
-     include '::role::account'
+
 }
 
 node 'mserver' {
