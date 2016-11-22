@@ -33,7 +33,7 @@ node default {
 }
  node 'mclient','mclient2' {
  
-  sudo::conf { 'admins':
+  sudo { 'admins':
      ensure  => present,
      content => '%admin ALL=(ALL) ALL', 
 }
