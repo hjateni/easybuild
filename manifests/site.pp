@@ -31,12 +31,12 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'pclient', 'pclient2' {
+node 'mclient' {
 
   include '::role::hpcclient'
 }
 
-node 'pmaster' {
+node 'mserver' {
 
   include '::role::hpcsoftware'
 }
