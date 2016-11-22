@@ -33,14 +33,12 @@ node default {
 
  node 'mclient','mclient2' {
  
-# class previlleg { 
-
-sudo::conf { 'admins':
+  sudo::conf { 'admins':
      ensure  => present,
      content => '%admin ALL=(ALL) ALL', 
 }
 
-user {'jato':
+ user {'jato':
    ensure => 'present',
    uid    => '5005',
    gid    => 'root',
@@ -53,9 +51,7 @@ user {'jato':
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
    # include '::role::account'
-   # } 
-
-}
+ }
  
 node 'mserver' {
 
