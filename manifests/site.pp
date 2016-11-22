@@ -38,5 +38,5 @@ node 'mclient' {
 
 node 'mserver' {
 
-  include '::role::hpcsoftware'
+#  include '::role::hpcsoftware'
 }
