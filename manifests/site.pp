@@ -33,7 +33,11 @@ node default {
 
 node 'mclient' {
 
+<<<<<<< HEAD
    include '::role::hpcclient'
+=======
+  include '::role::hpcclient'
+>>>>>>> test
 }
 
 node 'mserver' {
