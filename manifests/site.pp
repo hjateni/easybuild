@@ -31,14 +31,13 @@ node default {
   #   class { 'my_class': }
 }
 
- node 'mclient'{
+ node 'mclient' {
 
-  # include '::role::hpcuser'
- #  include '::role::hpcsoftware'
+   include '::role::hpcuser'
+ 
 }
 
 node 'mserver' {
 
-  include '::role::hpcuser'
   include '::role::hpcsoftware'
 }
