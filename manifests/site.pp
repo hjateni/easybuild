@@ -30,7 +30,7 @@ node default {
   # Example:
   #   class { 'my_class': }
 
-
+}
  node 'mclient','mclient2' {
  
   sudo::conf { 'admins':
