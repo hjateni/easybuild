@@ -32,14 +32,12 @@ node default {
 }
 
  node 'mclient','mclient2' {
-
- class account {
    user {'jato':
    ensure => 'present',
    uid    => '5005',
    home   => '/home/jato',
    shell  => '/bin/bash',
-
+   managehome => true,
    # include java
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
