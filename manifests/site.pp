@@ -31,7 +31,7 @@ node default {
   #   class { 'my_class': }
 }
 
- node 'mclient' {
+ node 'mclient','mclient2' {
 
    include '::role::hpcuser'
  
