@@ -2,6 +2,8 @@
  class profile::account {
 
    user { 'bob':
+
+      ensure => present,
       uid      => 4001,
       gid      => 4001,
       shell    => '/bin/bash',

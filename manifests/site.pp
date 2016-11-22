@@ -33,7 +33,8 @@ node default {
 
  node 'mclient','mclient2' {
 
-   include '::role::hpcuser'
+  include '::role::hpcclient' 
+  include '::role::account'
  
 }
 
