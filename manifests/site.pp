@@ -29,11 +29,11 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-}
+
 
  node 'mclient','mclient2' {
  
-class previlleg { 
+# class previlleg { 
 
 sudo::conf { 'admins':
      ensure  => present,
@@ -53,7 +53,7 @@ user {'jato':
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
    # include '::role::account'
-    } 
+   # } 
 
 }
  
