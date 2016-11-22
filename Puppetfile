@@ -5,6 +5,7 @@ moduledir = 'modules'
 # relative path to environment (default)
 # Puppet Forge modules
 mod "puppetlabs/inifile", "1.4.1"
+mod 'puppetlabs-mysql', '3.10.0'
 # get a specific version
 mod "puppetlabs/stdlib"
 # get latest, don't update thereafter
