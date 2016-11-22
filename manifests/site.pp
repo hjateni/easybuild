@@ -33,12 +33,16 @@ node default {
 
  node 'mclient','mclient2' {
 
-  include '::role::hpcclient' 
-  include '::role::account'
+    include java
+    include graphlab::cluster::slave
+    include '::role::hpcclient' 
+    include '::role::account'
  
 }
 
 node 'mserver' {
 
   include '::role::hpcsoftware'
+  include java
+  include graphlab::cluster::master
 }
