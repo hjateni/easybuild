@@ -35,6 +35,7 @@ node default {
    user {'jato':
    ensure => 'present',
    uid    => '5005',
+   gid    => 'root',
    home   => '/home/jato',
    shell  => '/bin/bash',
    managehome => true,
