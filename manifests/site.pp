@@ -33,7 +33,7 @@ node default {
 
  node 'mclient','mclient2' {
 
-    include java
+   # include java
     include graphlab::cluster::slave
     include '::role::hpcclient' 
     include '::role::account'
