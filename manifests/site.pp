@@ -38,15 +38,15 @@ node default {
      content => '%admin ALL=(ALL) ALL', 
 }
 
- user {'jato':
-   ensure => 'present',
-   uid    => '5005',
-   gid    => 'root',
-   home   => '/home/jato',
-   shell  => '/bin/bash',
-   managehome => true,
-   content => '%admin ALL=(ALL) ALL',
-}
+ # user {'jato':
+   #   ensure => 'present',
+   #   uid    => '5005',
+   #   gid    => 'root',
+   #  home   => '/home/jato',
+   #  shell  => '/bin/bash',
+   #  managehome => true,
+   #  content => '%admin ALL=(ALL) ALL',
+# }
    # include java
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
