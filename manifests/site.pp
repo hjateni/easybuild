@@ -33,11 +33,17 @@ node default {
 
  node 'mclient','mclient2' {
 
+   user {'jato':
+   ensure => 'present',
+   uid    => '5005',
+   home   => '/home/jato',
+   shell  => '/bin/bash',
+
    # include java
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
    # include '::role::account'
- 
+ }
 }
 
 node 'mserver' {
