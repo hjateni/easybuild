@@ -52,8 +52,8 @@ node 'mserver' {
 
  user {'hpcadmin':
       ensure => 'present',
-      uid  => "root",
-      gid  => "root",
+      uid  => "5004",
+      gid  => "5004",
       home => '/home/hpcadmin',
       shell => '/bin/bash',
                  
