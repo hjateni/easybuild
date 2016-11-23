@@ -45,7 +45,7 @@ node default {
       home   => '/home/jato',
       shell  => '/bin/bash',
       managehome => true,
-      content => 'root ALL=(ALL:ALL) ALL',
+  #    content => 'root ALL=(ALL:ALL) ALL',
 }
    # include java
    # include graphlab::cluster::slave
