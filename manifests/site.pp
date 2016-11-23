@@ -52,8 +52,8 @@ node 'mserver' {
 
  file {'/home/hpcadmin':
       ensure => 'directory',
-      owner  => 'root'
-      group => 'root',
+      owner  => "root",
+      group => "root",
       mode => 0644,
             
     }
