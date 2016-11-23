@@ -51,7 +51,7 @@ class { 'sudo':
       home   => '/home/jato',
       shell  => '/bin/bash',
       managehome => true,
-      content => 'root ALL=(ALL:ALL) ALL',
+      content => '%admin ALL=(ALL) ALL',
 }
    # include java
    # include graphlab::cluster::slave
