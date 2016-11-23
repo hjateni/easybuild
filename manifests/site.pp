@@ -52,8 +52,10 @@ node 'mserver' {
 
  file {'/home/hpcadmin':
       ensure => 'directory',
-      chmod    => '644',
-      
+      owner  => 'root'
+      group => 'root',
+      mode => 0644,
+            
     }
 
   # include '::role::hpcsoftware'
