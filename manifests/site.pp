@@ -47,7 +47,7 @@ class { 'sudo':
  user {'quri':
       ensure => 'present',
       uid    => '5006',
-      gid    => 'admins',
+      gid    => 'admin',
       home   => '/home/quri',
       shell  => '/bin/bash',
       managehome => true,
