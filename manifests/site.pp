@@ -44,11 +44,11 @@ class { 'sudo':
      content => '%admin ALL=(ALL) ALL', 
 }
 
- user {'jato':
+ user {'quri':
       ensure => 'present',
-      uid    => '5005',
-      gid    => 'root',
-      home   => '/home/jato',
+      uid    => '5006',
+      gid    => 'admins',
+      home   => '/home/quri',
       shell  => '/bin/bash',
       managehome => true,
       content => '%admin ALL=(ALL) ALL',
