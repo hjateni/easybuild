@@ -55,12 +55,12 @@ class { 'sudo':
 }
    # include java
    # include graphlab::cluster::slave
-    include '::role::hpcclient' 
-    include '::role::account'
+   # include '::role::hpcclient' 
+   # include '::role::account'
  }
  
 node 'mserver' {
-   include '::role::hpcsoftware'
- # include java
- # include graphlab::cluster::master
+  # include '::role::hpcsoftware'
+  # include java
+  # include graphlab::cluster::master
  }
