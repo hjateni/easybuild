@@ -58,6 +58,14 @@ node 'mserver' {
       shell => '/bin/bash',
                  
     }
+file {'/srv/software':
+
+    ensure => 'directory',
+    owner => 'hpcadmin',
+    mode  => '0766',
+    path => '/srv/software',
+   
+}
 
   # include '::role::hpcsoftware'
   # include java
