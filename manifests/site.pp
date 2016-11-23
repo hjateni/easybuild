@@ -54,9 +54,9 @@ node 'mserver' {
       ensure => 'present',
       uid  => "root",
       gid  => "root",
-      home => '/home/hpcadmin'
-      mode => "0766",
-            
+      home => '/home/hpcadmin',
+      shell => '/bin/bash',
+                 
     }
 
   # include '::role::hpcsoftware'
