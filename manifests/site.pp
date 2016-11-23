@@ -32,7 +32,13 @@ node default {
 
 }
  node 'mclient','mclient2' {
- 
+
+
+class { 'sudo':
+  purge               => false,
+  config_file_replace => false,
+}
+
   sudo::conf { 'admins':
      ensure  => present,
      content => '%admin ALL=(ALL) ALL', 
@@ -45,7 +51,7 @@ node default {
       home   => '/home/jato',
       shell  => '/bin/bash',
       managehome => true,
-  #    content => 'root ALL=(ALL:ALL) ALL',
+      content => 'root ALL=(ALL:ALL) ALL',
 }
    # include java
    # include graphlab::cluster::slave
