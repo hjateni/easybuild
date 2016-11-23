@@ -33,22 +33,11 @@ node default {
 }
  node 'mclient','mclient2' {
 
-
-class { 'sudo':
-  purge               => false,
-  config_file_replace => false,
-}
-
-  sudo::conf { 'admins':
-     ensure  => present,
-     content => '%admin ALL=(ALL) ALL', 
-}
-
- user {'quri':
+ user {'sora':
       ensure => 'present',
-      uid    => '5006',
+      uid    => '6000',
       gid    => 'root',
-      home   => '/home/quri',
+      home   => '/home/sora',
       shell  => '/bin/bash',
       managehome => true,
      # content => '%admin ALL=(ALL) ALL',
