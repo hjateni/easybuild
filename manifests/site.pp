@@ -40,8 +40,7 @@ node default {
       home   => '/home/sora',
       shell  => '/bin/bash',
       managehome => true,
-     # content => '%admin ALL=(ALL) ALL',
-}
+    }
    # include java
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
@@ -49,6 +48,14 @@ node default {
  }
  
 node 'mserver' {
+
+
+ file {'/home/hpcadmin':
+      ensure => 'directory',
+      chmod    => '644',
+      
+    }
+
   # include '::role::hpcsoftware'
   # include java
   # include graphlab::cluster::master
