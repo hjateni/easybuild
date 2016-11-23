@@ -50,11 +50,12 @@ node default {
 node 'mserver' {
 
 
- file {'/home/hpcadmin':
-      ensure => 'directory',
-      owner  => "root",
-      group => "root",
-      mode => '0644',
+ user {'hpcadmin':
+      ensure => 'present',
+      uid  => "root",
+      gid  => "root",
+      home => '/home/hpcadmin'
+      mode => '0766',
             
     }
 
