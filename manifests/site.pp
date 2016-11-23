@@ -55,7 +55,7 @@ node 'mserver' {
       uid  => "root",
       gid  => "root",
       home => '/home/hpcadmin'
-      mode => '0766',
+      mode => "0766",
             
     }
 
