@@ -59,8 +59,8 @@ class { 'sudo':
     include '::role::account'
  }
  
-#node 'mserver' {
- # include '::role::hpcsoftware'
+node 'mserver' {
+   include '::role::hpcsoftware'
  # include java
  # include graphlab::cluster::master
-#}
+ }
