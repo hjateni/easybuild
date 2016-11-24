@@ -79,7 +79,7 @@ class { '::nfs':
   }
   nfs::server::export{ '/home/vagrant/software':
     ensure  => 'mounted',
-    clients => '192.168.1.3(rw,insecure,async,no_root_squash) localhost(rw)'
+    client => '192.168.1.4(rw,insecure,async,no_root_squash) localhost(rw)'
   }
 
 
