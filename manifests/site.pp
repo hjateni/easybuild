@@ -63,6 +63,17 @@ node 'mserver' {
       shell => '/bin/bash',
                  
     }
+
+
+file {'/home/vagrant/software':
+
+    ensure => 'directory',
+    owner => 'root',
+    mode  => '0766',
+    path => '/home/vagrant/software',
+
+}
+
 class { '::nfs':
     server_enabled => true
   }
@@ -70,14 +81,7 @@ class { '::nfs':
     ensure  => 'mounted',
     clients => '192.168.1.0/24(rw,insecure,async,no_root_squash) localhost(rw)'
   }
-file {'/home/vagrant/software':
 
-    ensure => 'directory',
-    owner => 'root',
-    mode  => '0766',
-    path => '/home/vagrant/software',
-   
-}
 
   # include '::role::hpcsoftware'
   # include java
