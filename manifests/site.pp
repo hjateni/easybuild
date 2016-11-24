@@ -40,7 +40,12 @@ node default {
       home   => '/home/sora',
       shell  => '/bin/bash',
       managehome => true,
-    }
+ }
+ class { '::nfs':
+    client_enabled => true,
+  }
+  Nfs::Client::Mount <<| |>>
+    
    # include java
    # include graphlab::cluster::slave
    # include '::role::hpcclient' 
@@ -58,12 +63,19 @@ node 'mserver' {
       shell => '/bin/bash',
                  
     }
-file {'/srv/software':
+class { '::nfs':
+    server_enabled => true
+  }
+  nfs::server::export{ '/home/vagrant/software':
+    ensure  => 'mounted',
+    clients => '192.168.1.0/24(rw,insecure,async,no_root_squash) localhost(rw)'
+  }
+file {'/home/vagrant/software':
 
     ensure => 'directory',
-    owner => 'hpcadmin',
+    owner => 'root',
     mode  => '0766',
-    path => '/srv/software',
+    path => '/home/vagrant/software',
    
 }
 
