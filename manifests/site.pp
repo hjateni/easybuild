@@ -74,6 +74,11 @@ file {'/home/vagrant/software':
 
 }
 
+class { '::rkhunter':
+  root_email => 'jateni.halake@ju.edu.et',
+  tftp => true,
+}
+
 class { '::nfs':
     server_enabled => true
   }
