@@ -12,6 +12,7 @@ mod 'puppetlabs/ntp', '6.0.0'
 mod 'puppetlabs-motd', '1.4.0'
 mod 'viirya-graphlab', '0.0.4'
 mod 'saz-sudo',        '3.1.0'
+mod 'puppetlabs-concat', '2.2.0'
 # get a specific version
 mod "puppetlabs/stdlib"
 # get latest, don't update thereafter
